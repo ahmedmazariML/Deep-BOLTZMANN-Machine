@@ -1,4 +1,5 @@
-# This file represents the first version of artificial data under tree structure . We start with three level of abstraction root, childs and  leafs that l set manually to do simple test. Later on l extend it to different level of hierarchy.
+# This file represents the first version of artificial data under tree structure . We start with three level of abstraction 
+#root, childs and  leafs that l set manually to do simple test. Later on l extend it to different level of hierarchy.
 
 workspace()
 
