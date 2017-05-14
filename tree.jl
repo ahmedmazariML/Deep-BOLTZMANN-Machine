@@ -9,12 +9,7 @@ export Node,
     isleaf,
     lastsibling
 
-# "Left-child, right-sibling" tree representation:
-# Suppose a particular node, "A", has 3 children, "a", "b", and "c".
-#     "a", "b", and "c" link to "A" as their parent.
-#     "A" links "a" as its child; "a" links "b" as its sibling, and "b" links "c" as its sibling.
-#     Any missing links (e.g., "c" does not have a sibling) link back to itself (c.sibling == c)
-# With this organization, no arrays need to be allocated.
+
 
 type Node{T}
     data::T
@@ -76,10 +71,7 @@ isleaf(n::Node) = n == n.child
 
 show(io::IO, n::Node) = print(io, n.data)
 
-# Iteration over children
-# for c in parent
-#     # do something
-# end
+
 start(n::Node) = n.child
 done(n::Node, state::Node) = n == state
 next(n::Node, state::Node) = state, state == state.sibling ? n : state.sibling
